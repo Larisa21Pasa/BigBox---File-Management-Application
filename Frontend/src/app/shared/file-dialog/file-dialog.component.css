@@ -1,0 +1,52 @@
+/*************************************************************************
+
+ File:       file-dialog.component.css
+ Copyright:   (c) 2023 NazImposter
+
+ Module-History:
+ Date        Author                Reason
+ 25.12.2023  Matei Rares         Added style for navigation, folder, buttons and title
+
+ **************************************************************************/
+
+.dialog {
+
+}
+
+.title {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.navigation{
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+
+  background-color: #a2c4c9;
+  display: inline-block;
+
+}
+
+.folder {
+  width:90%;
+  margin-top:0px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+.name{
+  position: relative;
+  top: -5px;
+  left:10px;
+}
+mat-icon{
+  color: gray;
+}

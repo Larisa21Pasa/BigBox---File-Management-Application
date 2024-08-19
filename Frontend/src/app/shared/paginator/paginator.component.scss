@@ -1,0 +1,27 @@
+/*************************************************************************
+
+  File:        paginator.component.scss
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  13.12.2023  Sebastian Pitica      Basic Structure with styles
+
+**************************************************************************/
+
+* {
+  outline: none;
+}
+
+.host {
+  padding-right: 30px;
+  position: relative;
+  width: 100%;
+}
+
+
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

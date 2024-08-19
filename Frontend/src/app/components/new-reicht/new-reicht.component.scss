@@ -1,0 +1,24 @@
+/*************************************************************************
+
+  File:        new-reicht.component.css
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  27.12.2023  Matei Rares           Added style for container
+
+**************************************************************************/
+
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+h1 {
+  margin-bottom: 20px;
+}

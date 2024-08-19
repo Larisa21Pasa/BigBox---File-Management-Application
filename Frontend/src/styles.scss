@@ -1,0 +1,24 @@
+/*************************************************************************
+
+  File:        styles.scss
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  30.11.2023  Sebastian Pitica      Disable user selection
+  01.12.2023  Sebastian Pitica      Added more global styles
+
+**************************************************************************/
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 10px;
+  height: 100vh;
+  user-select: none;
+}
+*{
+  box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

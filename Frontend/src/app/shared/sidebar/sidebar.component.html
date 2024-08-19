@@ -1,0 +1,38 @@
+<!--/*************************************************************************
+
+  File:      sidebar.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  14.12.2023  Sebastian Pitica      Added components for sidebar and specific style classes
+  15.12.2023  Sebastian Pitica      Added future todos
+  30.12.2023  Sebastian Pitica      Added storage
+**************************************************************************/-->
+
+
+<mat-drawer class="sidebar" mode="side" opened>
+  <div class="spacer-1"></div>
+  <div class="drawer-button" routerLink="/home" routerLinkActive="active">
+    <button mat-raised-button>
+      Home
+    </button>
+  </div>
+  <div class="drawer-button" routerLink="/all-files" routerLinkActive="active">
+    <button mat-raised-button>
+      All files
+    </button>
+  </div>
+  <div class="drawer-button" routerLink="/deleted-files" routerLinkActive="active">
+    <button mat-raised-button>
+      Trash
+    </button>
+  </div>
+  <div class="spacer-2"></div>
+
+  <div class="storage-bar">
+    <div class="filler" [style.width.%]="percentageFilled"></div>
+  </div>
+  <div class="info">{{ formatedCurrent }}  / {{ formattedMax }} </div>
+
+</mat-drawer>

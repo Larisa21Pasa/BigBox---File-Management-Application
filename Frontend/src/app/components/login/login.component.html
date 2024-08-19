@@ -1,0 +1,74 @@
+<!--/*************************************************************************
+
+  File:        login.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  03.12.2023  Larisa Pasa           Added basic structure for login form.
+
+**************************************************************************/-->
+<app-welcome-topbar></app-welcome-topbar>
+
+<div class="container">
+
+  <div class="screen">
+    
+    <div class="screen__content">
+      <!-- Error Popup -->
+      <div *ngIf="showErrorMessage" class="error-popup">
+        <h5>{{ http_code_error_message }}</h5>
+      </div>
+
+      <h1 class="login__title">Log in</h1>
+
+      <!-- Login form -->
+      <form [formGroup]="Login" (ngSubmit)="ProceedLogin()">
+
+        <!-- email -->
+        <mat-form-field appearance="fill" class="login__field">
+          <mat-label>Email</mat-label>
+          <input matInput type="text" id="emailid" name="email" formControlName="email" placeholder="Enter email"
+            required>
+        </mat-form-field>
+
+        <!-- password -->
+        <mat-form-field appearance="fill" class="login__field">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" id="txtpassword" name="password" formControlName="password"
+            placeholder="Enter the password" required>
+        </mat-form-field>
+
+        <!-- submit -->
+        <button mat-raised-button [disabled]="!Login.valid" class="button login__submit" type="submit">
+          <span class="button__text">Log In Now</span>
+        </button>
+
+        <!-- admin user case -->
+        <ng-container *ngIf="isAdmin()">
+          <div class="form-group" style="text-align: center;">
+            <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="launchDesktopApp()">Open Desktop
+              App</button>
+          </div>
+        </ng-container>
+      </form>
+
+      <!-- alternative for inexistent user -->
+      <div class="login__not-signed">
+        <label class="not-signed-label">Not signed?</label>
+        <a routerLink="/sign-up" class="not-signed-link">Sign-up</a>
+      </div>
+      <div class="login__not-signed">
+        <a routerLink="/welcome" class="not-signed-link">Back to welcome</a>
+      </div>
+    </div>
+
+    <!-- just for view -->
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>
+  </div>
+</div>

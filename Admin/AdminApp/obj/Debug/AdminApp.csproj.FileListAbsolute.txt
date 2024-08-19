@@ -1,0 +1,68 @@
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\bin\Debug\AdminApp.exe.config
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\bin\Debug\AdminApp.exe
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\bin\Debug\AdminApp.pdb
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\bin\Debug\ReaLTaiizor.dll
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\bin\Debug\ReaLTaiizor.xml
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.AssemblyReference.cache
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\obj\Debug\AdminApp.Form1.resources
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\obj\Debug\AdminApp.Properties.Resources.resources
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.GenerateResource.cache
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.CoreCompileInputs.cache
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.CopyComplete
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\obj\Debug\AdminApp.exe
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\obj\Debug\AdminApp.pdb
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\obj\Debug\AdminApp.Menu.resources
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\obj\Debug\AdminApp.ModifForm.resources
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\matei\Desktop\adminapp\AdminApp\AdminApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\bin\Debug\AdminApp.exe.config
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\bin\Debug\AdminApp.exe
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\bin\Debug\AdminApp.pdb
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\bin\Debug\ReaLTaiizor.dll
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\bin\Debug\ReaLTaiizor.xml
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.AssemblyReference.cache
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\obj\Debug\AdminApp.Form1.resources
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\obj\Debug\AdminApp.Menu.resources
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\obj\Debug\AdminApp.ModifForm.resources
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\obj\Debug\AdminApp.Properties.Resources.resources
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.GenerateResource.cache
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.CoreCompileInputs.cache
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.CopyComplete
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\obj\Debug\AdminApp.exe
+C:\Users\matei\Desktop\Admin - Copy\AdminApp\AdminApp\obj\Debug\AdminApp.pdb
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.csproj.AssemblyReference.cache
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.Form1.resources
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.Menu.resources
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.ModifForm.resources
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.Properties.Resources.resources
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.csproj.GenerateResource.cache
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.csproj.CoreCompileInputs.cache
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.exe
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.pdb
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\AdminApp.exe.config
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\AdminApp.exe
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\AdminApp.pdb
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\Newtonsoft.Json.dll
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\ReaLTaiizor.dll
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\Newtonsoft.Json.xml
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\ReaLTaiizor.xml
+D:\an4\PAW\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.csproj.CopyComplete
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\AdminApp.exe.config
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\AdminApp.exe
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\AdminApp.pdb
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\Newtonsoft.Json.dll
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\ReaLTaiizor.dll
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\Newtonsoft.Json.xml
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\bin\Debug\ReaLTaiizor.xml
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.csproj.AssemblyReference.cache
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.Form1.resources
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.Menu.resources
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.ModifForm.resources
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.Properties.Resources.resources
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.csproj.GenerateResource.cache
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.csproj.CoreCompileInputs.cache
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.csproj.CopyComplete
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.exe
+D:\AAA Facultate\AN 4\AN 4 SEM 1\PAW - Proiectarea aplicatiilor web (Alexandrescu Adrian)\proiectpaw-nazimpostor\Admin\AdminApp\obj\Debug\AdminApp.pdb

@@ -1,0 +1,30 @@
+/*************************************************************************
+
+File:       question-dialog.component.css
+Copyright:   (c) 2023 NazImposter
+
+Module-History:
+Date        Author                Reason
+25.12.2023  Matei Rares         Added style for buttons and label
+
+**************************************************************************/
+
+.dialog {
+  position: relative;
+  width:100%;
+  height:100%;
+}
+
+
+label{
+  position: absolute;
+  font-size: 20px;
+  top:30%;
+  left:10%;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}

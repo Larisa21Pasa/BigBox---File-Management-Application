@@ -1,0 +1,312 @@
+/*************************************************************************
+
+  File:        contact.component.scss
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  03.12.2023  Larisa Pasa           Added styles for contact info
+
+**************************************************************************/
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+#contact {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 1%;
+  background: linear-gradient(to right, #d5d2f1 0%, #6A679E 100%);
+  padding-bottom: 100px;
+
+}
+
+
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Montserrat', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+  max-width: 400px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+.mat-form-field {
+  max-width: 100%;
+  background-color: aquamarine;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  /* Adjusted spacing */
+
+  input,
+  textarea {
+    border-color: #8E2DE2;
+    color: #fff;
+  }
+}
+
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+
+  .alt-send-button {
+    width: 100%;
+    height: 34px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: translate3d(0px, -29px, 0px);
+    }
+  }
+
+  .send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+  }
+}
+
+/* Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+
+  /* Location, Phone, Email Section */
+  .contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+
+  }
+
+  .list-item {
+
+    line-height: 4;
+    color: #aaa;
+
+    .contact-text {
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-text mat-icon {
+      margin-right: 10px;
+      /* Adăugați spațiu între icon și text */
+    }
+  }
+
+  .contact-text {
+
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: #fff;
+
+    .place {
+      margin-left: 62px;
+    }
+
+    .phone {
+      margin-left: 56px;
+    }
+
+    .gmail {
+      margin-left: 53px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition-duration: 0.2s;
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* Modificări pentru lista social-media */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin: 10px 3px;
+
+    a {
+      position: relative;
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+      color: #fff;
+      background-color: rgb(27, 27, 27);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        opacity: 0;
+        box-shadow: 0 0 0 1px #fff;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        background-color: #605f5f;
+
+        &:after {
+          opacity: 1;
+          transform: scale(1.12);
+          transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+        }
+
+        .contact-icon {
+          color: #000;
+          /* Set the color to blue on hover */
+        }
+      }
+    }
+  }
+}
+
+
+
+.copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 100%;
+    /* Adjusted max-width */
+  }
+
+  .direct-contact-container,
+  .form-horizontal {
+    margin: 0 auto;
+  }
+
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }
+
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+
+    &:after {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 569px) {
+
+  .direct-contact-container,
+  .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .form-control,
+  textarea {
+    margin: 0 auto;
+  }
+
+  .name,
+  .email,
+  textarea {
+    width: 280px;
+  }
+
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }
+
+  .social-media-list {
+    left: 0;
+  }
+
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+
+    &:after {
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+    }
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+}

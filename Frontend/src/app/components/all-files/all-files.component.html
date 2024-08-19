@@ -1,0 +1,78 @@
+<!--/*************************************************************************
+
+  File:        all-files.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  30.11.2023  Sebastian Pitica      Created structure with generating elements and functionalities for each entry, and displaying specifics, context menu
+  01.12.2023  Sebastian Pitica      Added paginator, progress bar for loading
+  13.12.2023  Sebastian Pitica      Removed paginator
+  15.12.2023  Sebastian Pitica      Added future todos
+  26.12.2023  Matei Rares           Added upload, download,drag file, back events and breadcrumb
+
+**************************************************************************/-->
+
+<script src="all-files.component.ts"></script>
+<div class="host" (mouseup)="handleMouseUp($event)" (mouseenter)="mouseEnter=true" (mouseleave)="mouseEnter=false"
+     (dragover)="onDragOver($event)"
+     (dragleave)="onDragLeave($event)"
+     (drop)="onDrop($event)"
+     (contextmenu)="unfocusFiles($event)"
+>
+  <div *ngIf="!isDragging">
+
+
+      <!--  back button -->
+    <button class="back-button" (click)="goBack()" mat-raised-button>
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+
+
+    <!--  bread crumb -->
+    <label> {{ breadCrumb }} </label>
+
+    <!--  empty folder -->
+  <div class="folder-gol" style="margin-top: 50px;margin-left: 50px" *ngIf="(displayedFsEntryJsons.length === 0)">
+    <h4  >Folder gol</h4>
+  </div>
+
+    <!--  context menu -->
+    <app-context-menu (optionClicked)="onOptionSelect($event)" *ngIf="contextmenu" [x]="contextmenuX" [y]="contextmenuY"
+                      [target]="fsComponentTarget"/>
+
+    <mat-list>
+      <ng-container *ngFor="let fsEntryJson of displayedFsEntryJsons; let index = index">
+        <ng-container *ngIf="index == 0 || displayedFsEntryJsons[index-1].isFile != fsEntryJson.isFile">
+          <mat-divider *ngIf="index != 0"></mat-divider>
+          <div mat-subheader>{{ fsEntryJson.isFile ? 'Files' : 'Directories' }}</div>
+        </ng-container>
+        <app-fs-entry tabindex="0"
+                      (open)="onOpen($event)"
+                      (lclick)="onLeftClick($event)"
+                      (rclick)="onRightClick($event)"
+                      [data]="JSON.stringify(fsEntryJson)"
+                      [class.index]="index"
+                      [index]="index">
+        </app-fs-entry>
+      </ng-container>
+    </mat-list>
+    <input style="display: none" type="file" #fileInput style="display: none" multiple (change)="onUploadFiles($event)">
+
+    <div class="upload-choice" *ngIf="showUploadChoice">
+      <button mat-raised-button (click)="fileInput.click()"> Add a file</button><br>
+      <button mat-raised-button (click)="createFolderAction(currentDirId,parentDirId)"> Create a folder</button>
+    </div>
+
+    <button class="upload-button" mat-fab color="accent" (click)="toggleUploadChoice()">
+      <mat-icon>add</mat-icon>
+    </button>
+
+  </div>
+
+  <div *ngIf="isDragging" style="margin-top: 30vw;margin-left: 30vw;" >
+    <h3>Drop it while it's hot</h3>
+  </div>
+
+</div>
+

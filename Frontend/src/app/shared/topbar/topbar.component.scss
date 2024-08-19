@@ -1,0 +1,33 @@
+/*************************************************************************
+
+  File:        topbar.component.scss
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  30.11.2023  Sebastian Pitica      Added styles for specific elements in topbar component
+
+**************************************************************************/
+
+.spacer-2 {
+  flex: 1 1 auto;
+}
+
+.spacer-1
+{
+  flex: 0.45 auto;
+}
+
+.input
+{
+  height: 90%;
+  width: 700px;
+}
+
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
+  color: white;
+}

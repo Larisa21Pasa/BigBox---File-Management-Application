@@ -1,0 +1,18 @@
+<!--/*************************************************************************
+
+  File:        paginator.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  13.12.2023  Sebastian Pitica      Basic Structure with events trigger
+
+**************************************************************************/-->
+
+<mat-paginator #paginator
+               class="host"
+               [length]="totalItems"
+               [pageSize]="10"
+               [pageSizeOptions]="[10, 20, 50, 100]"
+               (page)="onPageEvent($event)">
+</mat-paginator>

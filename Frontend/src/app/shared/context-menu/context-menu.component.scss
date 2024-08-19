@@ -1,0 +1,27 @@
+/*************************************************************************
+
+  File:        fs-entry.component.scss
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  01.12.2023 Sebastian Pitica      Added styles for context menu
+
+**************************************************************************/
+
+.contextmenu{
+  position: fixed;
+  z-index: 1;
+
+}
+
+ol {
+  background-color: #ffffff;
+  border: 1px solid lightgray;
+  margin:0;
+  padding: 10px 10px 10px 25px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
+
+}
+
+

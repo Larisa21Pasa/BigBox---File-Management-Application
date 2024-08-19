@@ -1,0 +1,98 @@
+<!--/*************************************************************************
+
+  File:        my-account.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  03.12.2023  Larisa Pasa           Added basic structure for my-account form and details.
+
+**************************************************************************/-->
+<div class="container">
+  <div class="screen">
+
+    <div class="screen__content">
+      <!-- Error Popup -->
+      <div *ngIf="showErrorMessage" class="error-popup">
+        <h5>{{ http_code_error_message }}</h5>
+      </div>
+
+      <!-- Image container -> email + user image -->
+      <div class="mini-container">
+        <div class="shadow-container">
+          <img src="../../../assets/userpc.webp" alt="User Image" width="50" height="50">
+          <p class="no-edit-email">{{ currentUser.email}}</p>
+        </div>
+      </div>
+
+      <!-- Edit containr -> Form for username and password edit -->
+      <div class="editclass">
+        <h2 class="edit_title">Edit Profile</h2>
+        <form [formGroup]="Edit" (ngSubmit)="ProceedEditUser()">
+
+          <!-- Username -->
+          <mat-form-field appearance="fill" class="edit_input">
+            <mat-label>Username </mat-label>
+            <input matInput type="text" id="nameid" formControlName="name" placeholder={{currentUser.name}}>
+          </mat-form-field>
+
+          <!-- Current password -->
+          <mat-form-field appearance="fill" class="edit_input">
+            <mat-label> Current Password</mat-label>
+            <input matInput type="password" id="current_passwordid" formControlName="current_password"
+              placeholder="current password">
+          </mat-form-field>
+
+          <!-- New Password -->
+          <mat-form-field appearance="fill" class="edit_input">
+            <mat-label>New Password</mat-label>
+            <input matInput type="password" id="new_passwordid" formControlName="new_password"
+              [placeholder]="Edit.get('new_password')?.value ? 'new password' : 'This field is required'">
+          </mat-form-field>
+
+          <!-- Confirm password -->
+          <mat-form-field appearance="fill" class="edit_input">
+            <mat-label>Confirm password</mat-label>
+            <input matInput type="password" id="confirmpasswordid" formControlName="confirm_password"
+              placeholder="confirm password">
+            <mat-error *ngIf="Edit.get('confirm_password')?.hasError('passwordMismatch')">Passwords do not
+              match</mat-error>
+          </mat-form-field>
+
+          <!-- Save changes -->
+          <div class="button-container">
+            <button mat-raised-button class="button save-button" type="submit">
+              <span class="button__text">Save</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Plan container -> display current plan for logged user -->
+      <div class="plan_details" *ngIf="currentUser && currentUser.subscription && currentUser.subscription.plan">
+        <h2>{{ currentUser.subscription.plan.namePlan }} Plan</h2>
+        <p><span class="bold-text">Cloud Storage:</span> {{ currentUser.subscription.plan.cloudStorage }}</p>
+        <p><span class="bold-text">Plan for Client Type:</span> {{ currentUser.subscription.plan.planForClientType }}
+        </p>
+        <p><span class="bold-text">Fit For:</span> {{ currentUser.subscription.plan.fitFor }}</p>
+        <p><span class="bold-text">Description:</span> {{ currentUser.subscription.plan.description }}</p>
+      </div>
+
+      <!-- Deactivate accound -> user can delete own account -->
+      <div class="deactivate_account">
+        <h2>Deactivate your account forever ? </h2>
+        <button mat-raised-button class="button deactivate-button" (click)="ProceedDeactivateAccount()">
+          <span class="button__text">Deactivate Account</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>
+  </div>
+</div>

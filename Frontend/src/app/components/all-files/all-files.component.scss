@@ -1,0 +1,52 @@
+/*************************************************************************
+
+  File:        all-files.component.scss
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  30.11.2023  Sebastian Pitica      Remove outline on focus
+  01.12.2023  Sebastian Pitica      Added styles for paginator and base element
+  13.12.2023  Sebastian Pitica      Removed paginator styles
+  26.12.2023  Matei Rares           Added upload button style
+
+**************************************************************************/
+
+* {
+  outline: none;
+}
+
+.host {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  height: calc(100vh - 160px);
+}
+
+.upload-button {
+  position: fixed;
+  bottom: 70px;
+  right: 30px;
+  background-color: #60329b;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.upload-choice{
+  position: fixed;
+  bottom: 110px;
+  right: 75px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #60329b;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  button{
+    background-color: #60329b;
+    color: #fff;
+    width: 130px;
+  }
+}

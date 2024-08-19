@@ -1,0 +1,67 @@
+<!--/*************************************************************************
+
+  File:        sign-up.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  03.12.2023  Larisa Pasa           Added basic structure for sign-up form.
+
+**************************************************************************/-->
+<app-welcome-topbar></app-welcome-topbar>
+
+<div class="container">
+  <div class="screen">
+    <div class="screen__content">
+      <!-- Error Popup -->
+      <div *ngIf="showErrorMessage" class="error-popup">
+        <h5>{{ http_code_error_message }}</h5>
+      </div>
+      <h1 class="login__title">Sign up</h1>
+
+      <!-- Signup form -->
+      <form [formGroup]="Signup" (ngSubmit)="ProceedSignup()">
+
+        <!-- name -->
+        <mat-form-field appearance="fill" class="login__field">
+          <mat-label>Your Name:</mat-label>
+          <input matInput type="text" id="nameid" formControlName="name" placeholder="Enter the User Name" required>
+        </mat-form-field>
+
+        <!-- email -->
+        <mat-form-field appearance="fill" class="login__field">
+          <mat-label>Email</mat-label>
+          <input matInput type="text" id="emailid" formControlName="email" placeholder="Enter the Email" required>
+        </mat-form-field>
+
+        <!-- password -->
+        <mat-form-field appearance="fill" class="login__field">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" id="txtpassword" formControlName="password" placeholder="Enter the password"
+            required>
+        </mat-form-field>
+
+        <!-- submit -->
+        <button mat-raised-button [disabled]="!Signup.valid" class="button login__submit" type="submit">
+          <span class="button__text">Sign Up</span>
+        </button>
+
+        <!-- alternative for existent user -->
+        <div class="login__not-signed">
+          <label class="not-signed-label">Already signed?</label>
+          <a routerLink="/login" class="not-signed-link">Go to login</a>
+        </div>
+        <div class="login__not-signed">
+          <a routerLink="/welcome" class="not-signed-link">Back to welcome</a>
+        </div>
+
+      </form>
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>
+  </div>
+</div>

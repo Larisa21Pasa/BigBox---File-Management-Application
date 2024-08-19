@@ -1,0 +1,19 @@
+<!--/*************************************************************************
+
+File:       question-dialog.component.html
+Copyright:   (c) 2023 NazImposter
+
+Module-History:
+Date        Author                Reason
+25.12.2023  Matei Rares         Added label and buttons
+
+**************************************************************************/-->
+
+<div class="dialog">
+  <label> {{ question }}</label><br>
+
+  <div class="buttons">
+    <button (click)="onAccept()">Accept</button>
+    <button (click)="onCancel()">Cancel</button>
+  </div>
+</div>

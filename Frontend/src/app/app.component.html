@@ -1,0 +1,24 @@
+<!--/*************************************************************************
+
+  File:      app.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  14.12.2023  Sebastian Pitica      Added paginator, and divs for styling purposes
+
+**************************************************************************/-->
+
+
+<app-topbar *ngIf="displayTopbar" class="top-bar" (onToggle)="onToggle($event)"></app-topbar>
+<div class="router-outlet-container">
+  <app-sidebar #sidebar *ngIf="displaySidebar" ></app-sidebar>
+  <div class="router-outlet-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<app-paginator *ngIf="displayPaginator"></app-paginator>
+
+<app-contact *ngIf="displayContact"></app-contact>
+

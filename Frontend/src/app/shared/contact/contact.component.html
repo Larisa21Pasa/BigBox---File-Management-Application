@@ -1,0 +1,76 @@
+<!--/*************************************************************************
+
+  File:        contact.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  03.12.2023  Larisa Pasa           Added basic structure for contact info.
+  18.01.2023  Matei Rares          Made all the validations
+**************************************************************************/-->
+<div class="section-container">
+
+  <section id="contact">
+    <h1 class="section-header">Contact</h1>
+    <div class="contact-wrapper">
+      <!-- Message form -->
+      <form id="contact-form" class="form-horizontal" role="form" [formGroup]="contactForm"
+        (ngSubmit)="SendClientMessageContactSection()">
+
+
+        <mat-form-field class="form-group">
+          <input matInput type="text" class="form-control" id="name" placeholder="Name" formControlName="name" required>
+        </mat-form-field>
+
+        <mat-form-field class="form-group">
+          <input matInput type="email" class="form-control" placeholder="Email" formControlName="email" required>
+        </mat-form-field>
+
+        <mat-form-field class="form-group">
+          <textarea matInput class="form-control" rows="3" placeholder="MESSAGE" formControlName="description" required></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="form-group" *ngIf="contactForm.get('description')?.invalid && (contactForm.get('description')?.dirty || contactForm.get('description')?.touched)">
+          <mat-error>Please enter a message.</mat-error>
+          <textarea matInput class="form-control" rows="3" placeholder="MESSAGE" formControlName="message" required></textarea>
+        </mat-form-field>
+
+        <button mat-raised-button class="btn btn-primary send-button" id="submit" type="submit" value="SEND" [disabled]="!contactForm.valid">
+          <div class="alt-send-button">
+            <i><mat-icon>mail_outline</mat-icon></i><span class="send-text">SEND</span>
+          </div>
+        </button>
+      </form>
+
+      <!-- Contact info  -->
+      <div class="direct-contact-container">
+        <ul class="contact-list">
+          <li class="list-item">
+            <mat-icon>location_on</mat-icon>
+            <span class="contact-text place">{{contactUs.address}}</span>
+          </li>
+
+          <li class="list-item">
+            <mat-icon>phone</mat-icon>
+            <span class="contact-text phone"><a href="tel:1-212-555-5555" title="Call us">{{contactUs.phone}}</a></span>
+          </li>
+
+          <li class="list-item">
+            <mat-icon>email</mat-icon>
+            <span class="contact-text gmail"><a href="mailto:#" title="Send an email">{{contactUs.email}}</a></span>
+          </li>
+        </ul>
+        <hr>
+        <ul class="social-media-list">
+          <li>
+            <a href="{{ github_path }}" target="_blank" class="contact-icon" (click)="redirectToGitHub()"> <i
+                class="fab fa-github" aria-label="GitHub"></i> </a>
+          </li>
+        </ul>
+        <hr>
+        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+      </div>
+    </div>
+
+  </section>
+</div>

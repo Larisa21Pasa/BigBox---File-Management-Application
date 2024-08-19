@@ -1,0 +1,166 @@
+CONTACT FORM IDEA: https://codepen.io/bobbykorec/pen/qOGbyr
+ABOUT US IDEA: https://workik.com/top-about-us-section-website-designs-with-html-css-and-javascript-code
+PLANS: 
+LOGIN/SIGN UP: https://codepen.io/Mohuth/pen/QWgrPvp
+
+<div class="container-fluid" style="margin-top: 10%;">
+  <div class="row">
+    <div class="offset-lg-3 col-lg-6">
+   
+      <div class="card-box" style="background-color: #ccc;">
+        <form [formGroup]="Login" (ngSubmit)="ProceedLogin()">
+        
+          <div class="row" style="display: block;">
+            <h2 style="text-align: center;">Login</h2>
+          </div>
+
+          <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+              <div class="form-group">
+                <label for="emailid">Email</label>
+                <input type="text" id="emailid" class="form-control" formControlName="email" placeholder="Enter the User Name" autocomplete="off" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+              <div class="form-group">
+                <label for="txtpassword">password</label>
+                <input type="text" id="txtpassword" class="form-control" formControlName="password" placeholder="Enter the password" autocomplete="off" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="offset-lg-3 col-lg-2">
+              <br>
+              <div class="form-group" style="text-align: center;">
+                <button type="submit" class="btn btn-primary btn-lg btn-block" [disabled]="!Login.valid">Login</button>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <br>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="row">
+          <ng-container *ngIf="isAdmin()">
+            <div class="form-group" style="text-align: center;">
+              <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="launchDesktopApp()">Open Desktop App</button>
+            </div>
+          </ng-container>
+        </div>
+
+        
+          <div class="row"> 
+            <h5 class="error_throwed">{{ http_code_error_message }}</h5>
+            <ng-container *ngIf="http_code_error_message ">
+              <label>Not signed?</label> <a routerLink="/sign-up">Sign-up</a><br><br><br>
+            </ng-container>
+          </div>
+          
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+.error-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff; /* Set the background color for the error pop-up */
+    padding: 10px; /* Adjust the padding as needed */
+    z-index: 2; /* Ensure the error pop-up is above the form */
+    text-align: center;
+    color: #ff0000; /* Set the text color for the error message */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Optional: Add a box shadow for a visual effect */
+  }
+
+.error-popup {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center the pop-up horizontally */
+    background: rgba(255, 0, 0, 0.7); /* Transparent red background */
+    padding: 15px; /* Adjust the padding as needed */
+    z-index: 2;
+    text-align: center;
+    color: #fff; /* White text color */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  }
+  
+  .error-popup h5 {
+    font-size: 18px; /* Adjust the font size as needed */
+    margin: 0;
+  }
+
+
+
+
+  SIGN UP:
+  <!-- sign-up.component.html -->
+
+<div class="container-fluid" style="margin-top: 10%;">
+    <div class="row">
+      <div class="offset-lg-3 col-lg-6">
+        <div class="card-box" style="background-color: #ccc;">
+          <form [formGroup]="Signup" (ngSubmit)="ProceedSignup()">
+            <div class="row" style="display: block;">
+              <h2 style="text-align: center;">Sign Up</h2>
+            </div>
+            <div class="row">
+              <div class="offset-lg-3 col-lg-6">
+                <div class="form-group">
+                  <label for="nameid">Your Name:</label>
+                  <input type="text" id="nameid" class="form-control" formControlName="name" placeholder="Enter the User Name" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-lg-3 col-lg-6">
+                <div class="form-group">
+                  <label for="emailid">Email</label>
+                  <input type="text" id="emailid" class="form-control" formControlName="email" placeholder="Enter the Email" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-lg-3 col-lg-6">
+                <div class="form-group">
+                  <label for="txtpassword">Password</label>
+                  <input type="password" id="txtpassword" class="form-control" formControlName="password" placeholder="Enter the password" autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-lg-3 col-lg-2">
+                <br />
+                <div class="form-group" style="text-align: center;">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block" [disabled]="!Signup.valid">Sign Up</button>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <br />
+                <span></span>
+              </div>
+            </div>
+            <div class="row"> 
+                <h5 class="error_throwed">{{ http_code_error_message }}</h5>
+                <ng-container *ngIf="http_code_error_message && http_code_error_message.includes('409')">
+                  <label>Already signed?</label> <a routerLink="/login">Go to login page</a><br><br><br>
+                </ng-container>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

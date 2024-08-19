@@ -1,0 +1,33 @@
+<!--/*************************************************************************
+
+  File:        home.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  03.12.2023  Pasa Larisa          Added dummy render info to check token functionality.
+  14.12.2023  Sebastian Pitica     Removed dummy render info and added host div
+  27.12.2023  Matei Rares          Added buttons and events for upload file and create folder
+  27.12.2023  Matei Rares          Added recent file div
+
+**************************************************************************/-->
+
+<div class="host">
+  <input style="display: none" type="file" #fileInput style="display: none" multiple (change)="onUploadFiles($event)">
+  <button mat-raised-button (click)="createFolder()"> Create a folder</button>
+  <button mat-raised-button (click)="addFile()"> Add a file</button><br>
+  <br>
+  <br>
+  <h3 *ngIf="displayedFsEntryJsons.length <= 0 || displayedFsEntryJsons === undefined">&nbsp;&nbsp;Recent folders:</h3>
+  <div class="recent-files">
+    <ng-container *ngFor="let recentFile of displayedFsEntryJsons; let index=index">
+      <ng-container *ngIf="!recentFile.isFile && recentFile.entryId !== userRootEntryId">
+        <div class="recent-patrat" (click)="openFile(recentFile)">
+          <img src="assets/img.png" alt="{{ recentFile.name }}" width="100" height="100">
+          <div class="file-name">{{ recentFile.name }}</div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>
+

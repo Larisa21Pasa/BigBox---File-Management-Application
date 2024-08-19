@@ -1,0 +1,63 @@
+<!--/*************************************************************************
+
+  File:        welcome.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  03.12.2023  Larisa Pasa           Added basic structure for welcome forpagem.
+
+**************************************************************************/-->
+
+<div class="main-container">
+  <app-welcome-topbar></app-welcome-topbar>
+  <!--  About us -->
+  <div class="section-container">
+    <div class="responsive-container-block bigContainer">
+      <div class="responsive-container-block Container bottomContainer">
+        <div class="ultimateImg">
+          <img class="mainImg" src="../../../assets/folders.png" width="660" height="475">
+          <div class="purpleBox">
+            <p class="purpleText">
+              {{ aboutUs.history }}
+            </p>
+          </div>
+        </div>
+        <div class="allText bottomText">
+          <p class="text-blk headingText">
+            {{ aboutUs.title }}
+          </p>
+          <p class="text-blk subHeadingText">
+            {{ aboutUs.popularity }}
+          </p>
+          <p class="text-blk description">
+            {{ aboutUs.appScope }}
+          </p>
+          <a class="explore" routerLink="/sign-up">Sign-up</a>
+          <a class="explore" routerLink="/login">Go to Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Plans details -->
+  <div class="wrapper">
+    <div class="pricing-table gprice-single" *ngFor="let plan of plans">
+      <div class="head">
+        <h4 class="title">{{ plan.namePlan }}</h4>
+      </div>
+      <div class="content">
+        <div class="price">
+          <h1>{{ plan.cloudStorage }}</h1>
+        </div>
+        <ul>
+          <li>Available for {{ plan.planForClientType }} cliens</li>
+          <li>Perfect for {{ plan.fitFor }}</li>
+          <li>{{ plan.description }}</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+</div>

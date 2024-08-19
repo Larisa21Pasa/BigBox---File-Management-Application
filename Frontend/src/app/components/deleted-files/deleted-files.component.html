@@ -1,0 +1,60 @@
+<!--/*************************************************************************
+
+  File:        deleted-files.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author               Reason
+  14.12.2023  Sebastian Pitica     Added host div
+  26.12.2023  Matei Rares          Added table with contents and context menu
+
+**************************************************************************/-->
+
+<div class="host" (contextmenu)="unfocusFiles($event)" (click)="unfocusFiles($event)" >
+
+  <div class="folder-gol" style="margin-top: 50px;margin-left: 50px"  *ngIf="(displayedFsEntryJsons.length === 0)">
+    <h4 >Nu exista fisiere in trash</h4>
+  </div>
+
+
+  <table style="border:solid 1px" *ngIf="displayedFsEntryJsons.length !==0">
+    <thead>
+    <tr>
+      <th style="width: 300px;">Name</th>
+     <!-- <th>ID</th>
+      <th>Parent ID</th>-->
+      <th style="width: 120px;">Type of file</th>
+
+      <th  style="width: 130px;">Size (Kb)</th>
+      <th  style="width: 400px;">Description</th>
+    </tr>
+    </thead>
+    <ng-container *ngFor="let entry of displayedFsEntryJsons; let index=index">
+      <tbody style="border:solid 1px" >
+      <tr style="border:solid 1px" [class.highlight]="selectedRow === index"
+          (click)="onRowClick($event,entry,index)"
+          (contextmenu)="openCustomContext($event,entry,index)"
+          (dblclick)="dbClickRestore($event,entry)"
+      >
+
+        <td>{{ entry.name }}</td>
+      <!--  <td>{{ entry.entryId }}</td>
+        <td>{{ entry.parentId }}</td>-->
+        <td>{{ entry.isFile ? "File":"Folder" }}</td>
+        <td>{{ entry.size  }}</td>
+        <td>{{ entry.entryDescription }}</td>
+
+      </tr>
+      </tbody>
+    </ng-container>
+  </table>
+
+
+
+  <div class="options" [style.left.px]="optionsX" [style.top.px]="optionsY" *ngIf="showOptions">
+    <!-- Content of the floating div -->
+    <button (click)="handleRestore()">Restore</button>
+    <br>
+    <button (click)="handleDelete()">Permanently delete</button>
+  </div>
+</div>

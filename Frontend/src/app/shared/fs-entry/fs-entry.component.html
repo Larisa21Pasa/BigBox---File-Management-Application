@@ -1,0 +1,26 @@
+<!--/*************************************************************************
+
+  File:        fs-entry.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  01.12.2023  Sebastian Pitica      Created structure with functionalities of class, mouse events, context menu, displaying specifics
+  16.12.2023  Sebastian Pitica      Added displaying of entry description and size if available
+
+**************************************************************************/-->
+
+<mat-list-item [class.selected]="isSelected"
+               [class.id]="entryId"
+               [class.hover]="isHover"
+               (mouseover)="onMouseover($event)"
+               (mouseout)="onMouseout($event)"
+               (contextmenu)="onRightClick($event)"
+               (dblclick)="onOpen($event)"
+               (click)="onLeftClick($event)">
+  <mat-icon matListItemIcon>{{ isFile ? 'insert_drive_file' : 'folder' }}</mat-icon>
+  <div matListItemTitle>{{ name }}</div>
+  <div matListItemLine *ngIf="size!=undefined">{{ formatStorage(size) }} </div>
+  <div matListItemLine>{{ createdDate | date }}</div>
+  <div matListItemLine *ngIf="entryDescription!=undefined">{{ entryDescription }}</div>
+</mat-list-item>

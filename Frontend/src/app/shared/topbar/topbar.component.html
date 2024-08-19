@@ -1,0 +1,38 @@
+<!--/*************************************************************************
+
+  File:      topbar.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  07.12.2023  Larisa Pasa           Added my-account link router
+  01.12.2023  Sebastian Pitica      Created structure with search bar, profile button and menu button and logo
+  15.12.2023  Sebastian Pitica      Added search function call
+  16.12.2023  Sebastian Pitica      Added future todos
+  30.12.2023  Matei Rares           Added name
+**************************************************************************/-->
+
+<mat-toolbar>
+  <button mat-icon-button (click)="onToggleSideBar()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span  routerLink="/all-files" >BigBox&nbsp;</span>
+  <mat-icon  routerLink="/all-files" >layers</mat-icon>
+  <span class="spacer-1"></span>
+  <mat-form-field appearance="outline" class="input">
+    <mat-label>Search</mat-label>
+    <input #nameInput (blur)="onInputBlur()" (keyup.enter)="onEnterPressed($event)" matInput placeholder="File/directory name">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <span class="spacer-2"></span>
+  <label>Hello, {{this.user_name}} !</label>
+  <button mat-icon-button routerLink="/my-account">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+
+  <button mat-icon-button  routerLink="/welcome" (click)="Logout()">
+
+    <mat-icon>logout</mat-icon>
+  </button>
+
+</mat-toolbar>

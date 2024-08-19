@@ -1,0 +1,246 @@
+/*************************************************************************
+
+  File:        my-account.component.scss
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  03.12.2023  Larisa Pasa           Added styles for my-account page
+
+**************************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+}
+
+/* Container attributes */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background: linear-gradient(90deg, #f0eff2, #ecebf5);
+  min-height: 100vh;
+}
+
+/* Create pop-up effect and apply background shapes */
+.screen {
+  background: linear-gradient(90deg, #a39fcb, #615d9d);
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  height: 600px;
+  width: 900px;
+  box-shadow: 0px 0px 24px #c0bde0;
+
+  &__content {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    box-shadow: 0px 0px 20px #16124f;
+
+
+  }
+
+  &__background {
+    /* SHADOWS */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+
+
+    &__shape {
+      transform: rotate(45deg);
+      position: absolute;
+    }
+
+
+    &__shape2 {
+      height: 220px;
+      width: 220px;
+      background: #9892c2;
+      top: -172px;
+      right: 0;
+      border-radius: 32px;
+    }
+
+
+    &__shape3 {
+      height: 540px;
+      width: 190px;
+      background: linear-gradient(270deg, #d5d2f1, #6A679E);
+      top: -24px;
+      right: 0;
+      border-radius: 32px;
+    }
+
+
+    &__shape4 {
+      height: 400px;
+      width: 200px;
+      background: #e4e3f8;
+      top: 420px;
+      right: 50px;
+      border-radius: 60px;
+    }
+  }
+
+  /* Container with 4 sub-containers: Image, Edit, Plan, Account Deactivate */
+
+  .screen__content {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+
+
+    /* IMAGE -> 10% */
+    .mini-container {
+      flex: 0 0 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      .shadow-container {
+        display: flex;
+        box-shadow: 0px 0px 3px #f4f4f7;
+        border-radius: 10px;
+        align-items: center;
+
+        .mini-container img {
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+
+        .no-edit-email {
+          margin: 10px;
+          color: white;
+          font-size: 20px;
+        }
+      }
+    }
+
+    /* EDIT BOX -> 30% */
+    .editclass {
+      flex: 0 0 30%;
+      /* 30% width, don't grow it*/
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 10px #f4f4f7;
+
+      .edit_title {
+        color: white;
+        font-size: 20px;
+      }
+
+
+      .edit_input {
+        margin-right: 20px;
+        margin-left: 20px;
+        width: 20%;
+
+      }
+
+      .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+    }
+
+
+    /* PLAN BOX -> 30% */
+    .plan_details {
+      flex: 0 0 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 10px #f4f4f7;
+
+
+      h2 {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: white;
+        font-size: 16px;
+        margin-bottom: 5px;
+
+        .bold-text {
+          font-weight: bold;
+        }
+
+      }
+    }
+
+    /* ACCOUNT_DEACTIVATE -> 30% */
+    .deactivate_account {
+      flex: 0 0 20%;
+      /* 30% width, don't grow it*/
+      box-shadow: 0px 0px 10px #f4f4f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+
+      h2 {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    }
+
+
+  }
+}
+
+
+.error-popup {
+  position: absolute;
+  top: 20px;
+  /* Adjust the top position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Center the pop-up horizontally */
+  background: rgba(255, 0, 0, 0.7);
+  /* Transparent red background */
+  padding: 15px;
+  /* Adjust the padding as needed */
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  /* White text color */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  /* Optional: Add border-radius for rounded corners */
+}
+
+
+.error-popup h5 {
+  font-size: 18px;
+  /* Adjust the font size as needed */
+  margin: 0;
+}

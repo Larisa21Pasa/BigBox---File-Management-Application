@@ -1,0 +1,40 @@
+<!--/*************************************************************************
+
+File:       file-dialog.component.html
+Copyright:   (c) 2023 NazImposter
+
+Module-History:
+Date        Author                Reason
+25.12.2023  Matei Rares         Added title,navigation,folders,title and buttons
+
+**************************************************************************/-->
+<div class="dialog">
+
+  <p class="title"><strong>{{ data.title }}</strong></p>
+
+  <div class="navigation">
+    <button class="back" *ngIf="navigationHistory.length >1" (click)="goBack()">Back</button>&nbsp;
+    <label>{{ breadCrumb }}</label>
+  </div>
+
+  <div class="folders" *ngIf="displayedEntries.length !==0">
+    <ng-container *ngFor="let entry of displayedEntries; let index=index">
+      <div class="folder"
+           (click)="selectFolder(entry.entryId)"
+           (dblclick)="openFolder(entry.entryId,entry.name,entry.parentId)"
+           [class.highlight]="selectedFolderID === entry.entryId"
+           *ngIf="!(entry.isFile) && !(entry.entryId === ignoreFileID)">
+        <mat-icon aria-hidden="false" fontIcon="folder"></mat-icon>
+        <label class="name"> {{ entry.name }} </label>
+      </div>
+    </ng-container>
+  </div>
+
+
+  <label class="title" *ngIf="displayedEntries.length === 0"> folder gol</label>
+
+  <div class="buttons">
+    <button (click)="cancelDialog()">Cancel</button>
+    <button (click)="acceptDialog()">Select</button>
+  </div>
+</div>

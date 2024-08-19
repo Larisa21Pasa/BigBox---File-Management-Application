@@ -1,0 +1,52 @@
+/*************************************************************************
+
+  File:        deleted-files.component.scss
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  14.12.2023  Sebastian Pitica      Added styles for specific elements
+  26.12.2023  Matei Rares           Added style for context menu and table
+
+**************************************************************************/
+
+* {
+  outline: none;
+}
+
+.host {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  height: calc(100vh - 160px);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 4px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.highlight {
+  background-color: #a2c4c9;
+}
+.options {
+  position: fixed;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}

@@ -1,0 +1,18 @@
+<!--/*************************************************************************
+
+  File:       context-menu.component.html
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  01.12.2023  Sebastian Pitica      Added onMenuItemClick method for context menu and patched some bugs
+
+**************************************************************************/-->
+
+<div class="contextmenu" [ngClass]="{'show': target}" [ngStyle]="{'left.px': x, 'top.px': y}" (contextmenu)="$event.preventDefault()">
+  <ol>
+    <ng-container *ngFor="let item of menuItems">
+      <li (click)="onMenuItemClick(item)">{{ item }}</li>
+    </ng-container>
+  </ol>
+</div>

@@ -1,0 +1,46 @@
+/*************************************************************************
+
+  File:        fs-entry.component.scss
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  30.11.2023  Sebastian Pitica      Added styles for fs-entry component on selection event and for icon hover
+  17.1.2023   Matei Rares           Purple icons and hover functionality
+**************************************************************************/
+
+.selected {
+  background-color: #b9b8b8;
+
+  & * {
+    background-color: inherit;
+  }
+  //
+  .mat-icon {
+    color: #251e50;
+  }
+  //
+}
+
+:not(.selected) {
+  background-color: white;
+
+  & * {
+    background-color: inherit;
+  }
+  //
+  .mat-icon:not(.hover) {
+    color: #4C489D;
+  }
+
+  &:hover .mat-icon {
+    color: rgba(76, 72, 157, 0.60);
+  }
+  //
+}
+
+/*
+.mat-mdc-list-item-icon {
+  color: rgba(0, 0, 0, 0.54);
+}
+*/

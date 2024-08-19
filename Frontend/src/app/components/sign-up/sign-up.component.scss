@@ -1,0 +1,254 @@
+/*************************************************************************
+
+  File:        sign-up.component.scss
+  Copyright:   (c) 2023 NazImposter
+
+  Module-History:
+  Date        Author                Reason
+  03.12.2023  Larisa Pasa           Added styles for sign-up form
+
+**************************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+}
+
+
+/* Container attributes */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background: linear-gradient(90deg, #f0eff2, #d5d3e8);
+  min-height: 100vh;
+}
+
+/* Create pop-up effect and apply background shapes */
+.screen {
+  background: linear-gradient(90deg, #5D54A4, #7C78B8);
+  position: relative;
+  height: 600px;
+  width: 360px;
+  box-shadow: 0px 0px 24px #5C5696;
+
+  &__content {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    padding: 30px; // Added padding to content
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+
+    &__shape {
+      transform: rotate(45deg);
+      position: absolute;
+    }
+
+    &__shape1 {
+      height: 520px;
+      width: 520px;
+      background: #FFF;
+      top: -50px;
+      right: 120px;
+      border-radius: 0 72px 0 0;
+    }
+
+    &__shape2 {
+      height: 220px;
+      width: 220px;
+      background: #6C63AC;
+      top: -172px;
+      right: 0;
+      border-radius: 32px;
+    }
+
+    &__shape3 {
+      height: 540px;
+      width: 190px;
+      background: linear-gradient(270deg, #5D54A4, #6A679E);
+      top: -24px;
+      right: 0;
+      border-radius: 32px;
+    }
+
+    &__shape4 {
+      height: 400px;
+      width: 200px;
+      background: #7E7BB9;
+      top: 420px;
+      right: 50px;
+      border-radius: 60px;
+    }
+  }
+}
+
+/* Container with sign-up form components */
+.screen__content {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  padding: 100px 30px;
+
+
+  .login__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px; 
+  }
+  
+  .login__not-signed {
+    text-align: center;
+    margin-top: 20px;
+
+    .not-signed-label {
+      font-size: 16px;
+      color: #fff;
+      display: block;
+      margin-left: 150px;
+      margin-top: 60px;
+      margin-bottom: 5px;
+    }
+
+    .not-signed-link {
+      font-size: 18px;
+      color: #fff;
+      text-decoration: underline;
+      margin-left: 150px;
+      margin-top: 100px;
+      margin-bottom: 5px;
+
+      &:hover {
+        color: #6A679E;
+      }
+    }
+  }
+}
+
+/* Ajust dimension for fields box */
+
+.login__field {
+  width: 60%;
+  margin-top: -30px;
+
+  .mat-form-field-wrapper {
+    padding: 2px; // Adjust the padding for the form fields
+    display: flex;
+    flex-direction: column-reverse; // Align items vertically at the end
+  }
+
+
+  mat-label {
+    font-size: 14px; // Adjust the font size for labels if needed
+  }
+}
+
+/* Form elements scss */
+.login {
+  width: 80%; // Adjusted width to 100%
+  padding-top: 0;
+
+  &__field {
+    padding: 20px 0;
+
+    &__icon {
+      position: absolute;
+      top: 30px;
+      color: #7875B5;
+    }
+
+    &__input {
+      border: none;
+      border-bottom: 2px solid #D1D1D4;
+      background: none;
+      padding: 10px;
+      padding-left: 24px;
+      font-weight: 700;
+      width: 50%;
+      transition: .2s;
+
+      &:active,
+      &:focus,
+      &:hover {
+        outline: none;
+        border-bottom-color: #6A679E;
+      }
+    }
+  }
+
+  &__submit {
+    background: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1px solid #D4D3E8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #4C489D;
+    box-shadow: 0px 2px 2px #5C5696;
+    cursor: pointer;
+    transition: .2s;
+
+    &:active,
+    &:focus,
+    &:hover {
+      border-color: #6A679E;
+      outline: none;
+    }
+
+    &__icon {
+      font-size: 24px;
+      margin-left: auto;
+      color: #7875B5;
+    }
+  }
+}
+
+
+/* Sccs for error popup details */
+
+.error-popup {
+  position: absolute;
+  top: 20px;
+  /* Adjust the top position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Center the pop-up horizontally */
+  background: rgba(255, 0, 0, 0.7);
+  /* Transparent red background */
+  padding: 15px;
+  /* Adjust the padding as needed */
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  /* White text color */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  /* Optional: Add border-radius for rounded corners */
+}
+
+.error-popup h5 {
+  font-size: 18px;
+  /* Adjust the font size as needed */
+  margin: 0;
+}

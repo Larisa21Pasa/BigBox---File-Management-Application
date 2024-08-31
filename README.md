@@ -33,6 +33,6 @@ management and maintenance.
 • Upload, modify, and organize files efficiently.
 • Securely store and access data from multiple devices.
 
-!! This is a school project developed by a team of four members.
+!!! This is a team project developed during the 4th year of the Automatics and Computers program. !!!
 
 !!! My contribution to the project development includes both front-end and back-end components, specifically focusing on security aspects such as authorization and authentication using Spring Boot libraries.
